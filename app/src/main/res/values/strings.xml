@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerViewDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="open_desc">open</string>
+    <string name="close_desc">close</string>
+
+
+</resources>
