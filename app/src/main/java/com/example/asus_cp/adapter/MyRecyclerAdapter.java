@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.asus_cp.image_load_my.ImageLoader;
+import com.example.asus_cp.image_load_my.ImageLoaderIml;
 import com.example.asus_cp.listener.OnclickListnerMy;
 import com.example.asus_cp.modle.Product;
 import com.example.asus_cp.activity.R;
@@ -46,7 +48,12 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter {
         final MyViewHolder myViewHolder= (MyViewHolder) holder;
         ImageView imageView=myViewHolder.imageView;
 
-        Glide.with(context).load(products.get(position).getImg()).into(imageView);
+        imageView.setImageResource(R.mipmap.ic_launcher);
+
+        imageView.setTag(products.get(position).getImg());
+        ImageLoader imageLoader=new ImageLoaderIml();
+        imageLoader.load(products.get(position).getImg(),imageView);
+        //Glide.with(context).load(products.get(position).getImg()).into(imageView);
         //imageView.setImageResource();
         myViewHolder.textView.setText(products.get(position).getName());
 

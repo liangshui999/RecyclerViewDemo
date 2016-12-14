@@ -36,7 +36,7 @@ public class AddressListAdapter extends RecyclerView.Adapter {
     private List<Integer> mTypies;
 
     /**
-     * 用2个map来记录真实位置，和在对应的集合中的位置之间的关系
+     * 用2个map来记录真实位置和在对应的集合中的位置之间的关系
      */
     private Map<Integer,Integer> mIndexMap;//前一个是position，后一个是所在集合中的真实位置
     private Map<Integer,Integer> mContentMap;
